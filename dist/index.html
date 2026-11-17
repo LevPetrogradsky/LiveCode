@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6f8fc" />
+  <meta name="description" content="LiveCode is being prepared. Explore its home and navigation." />
+  <title>LiveCode</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="LiveCode navigation">
+      <div class="brand" aria-label="LiveCode"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>LiveCode<span class="brand-dot">.</span></span></div>
+      <nav class="side-nav" aria-label="Service navigation">
+        <button type="button" class="nav-item" data-view-button="home" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span data-i18n="home">Home</span></button>
+        <button type="button" class="nav-item" data-view-button="settings"><span class="nav-icon" aria-hidden="true">⚙</span><span data-i18n="settings">Settings</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <a class="hub-link" href="https://lifeos-demo-kappa.vercel.app/"><span aria-hidden="true">↗</span><span data-i18n="backToHub">Back to LiveHub</span></a>
+        <span class="version">LiveCode v0.1</span>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="mobile-header">
+        <span class="brand"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>LiveCode<span class="brand-dot">.</span></span></span>
+        <a class="mobile-hub-link" href="https://lifeos-demo-kappa.vercel.app/" aria-label="Back to LiveHub"><span data-i18n="hub">LiveHub</span><span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main id="home-view" class="view home-view" tabindex="-1">
+        <div class="home-content">
+          <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="preview">Early preview</span></span>
+          <h1 data-i18n="headline">A place for code is taking shape.</h1>
+          <p class="lead" data-i18n="description">LiveCode is being prepared. Coding tools are not available yet.</p>
+          <div class="status-card" role="status">
+            <span class="status-icon" aria-hidden="true">⌘</span>
+            <div><strong data-i18n="statusTitle">What works today</strong><p data-i18n="statusText">You can explore this home, change the appearance, and return to LiveHub. More will appear here when it is ready.</p></div>
+          </div>
+          <button type="button" class="settings-link" data-view-button="settings"><span data-i18n="openSettings">Open settings</span><span aria-hidden="true">→</span></button>
+        </div>
+        <div class="ambient" aria-hidden="true"><span class="ambient-line">&lt; / &gt;</span><span class="ambient-orbit ambient-orbit-one"></span><span class="ambient-orbit ambient-orbit-two"></span></div>
+      </main>
+
+      <main id="settings-view" class="view settings-view" tabindex="-1" hidden>
+        <div class="settings-content">
+          <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span>LiveCode</span></span>
+          <h1 data-i18n="settings">Settings</h1>
+          <p class="settings-intro" data-i18n="settingsIntro">Only preferences for this preview are available.</p>
+          <section class="setting-card" aria-labelledby="appearance-heading">
+            <div class="setting-heading"><span class="setting-icon" aria-hidden="true">◐</span><div><h2 id="appearance-heading" data-i18n="appearance">Appearance</h2><p data-i18n="appearanceHint">Choose how this page looks.</p></div></div>
+            <div class="option-row" role="group" aria-labelledby="appearance-heading">
+              <button type="button" data-theme-option="system" data-i18n="system">System</button>
+              <button type="button" data-theme-option="light" data-i18n="light">Light</button>
+              <button type="button" data-theme-option="dark" data-i18n="dark">Dark</button>
+            </div>
+          </section>
+          <section class="setting-card" aria-labelledby="language-heading">
+            <div class="setting-heading"><span class="setting-icon" aria-hidden="true">文</span><div><h2 id="language-heading" data-i18n="language">Language</h2><p data-i18n="languageHint">Choose the language for this page.</p></div></div>
+            <div class="option-row" role="group" aria-labelledby="language-heading">
+              <button type="button" data-language-option="en">English</button>
+              <button type="button" data-language-option="ru">Русский</button>
+            </div>
+          </section>
+          <p class="privacy-note" data-i18n="privacy">This preview does not accept code, accounts, or API keys.</p>
+        </div>
+      </main>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Service navigation">
+      <button type="button" class="mobile-nav-item" data-view-button="home" aria-current="page"><span class="mobile-nav-icon" aria-hidden="true">⌂</span><span data-i18n="home">Home</span></button>
+      <button type="button" class="mobile-nav-item" data-view-button="settings"><span class="mobile-nav-icon" aria-hidden="true">⚙</span><span data-i18n="settings">Settings</span></button>
+    </nav>
+  </div>
+</body>
+</html>
